@@ -4,7 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
-from database import DataBase
+from Database import DataBase
 
 class CreateAccountWindow(Screen):
     namee = ObjectProperty(None)
@@ -81,7 +81,7 @@ class MainWindow(Screen):
 class WindowManager(ScreenManager):
     pass
 
-kv = Builder.load_file("my.kv")
+kv = Builder.load_file("mk.kv")
 sm = WindowManager()
 db = DataBase("users.txt")
 

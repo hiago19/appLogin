@@ -8,12 +8,18 @@ class DataBase:
         self.load()
 
     def load(self):
-        self.file = open(self.filename, "r")
-        self.users = {}
-        for line in self.file:
-            email, password, name, created = line.strip().split(";")
-            self.users[email] = (password, name, created)
-        self.file.close()
+        try:
+            with open(self.filename, "r") as file:
+                self.users = {}
+                for line in file:
+                    values = line.strip().split(";")
+                    if len(values) == 4:
+                        email, password, name, created = values
+                        self.users[email] = (password, name, created)
+                    else:
+                        print(f"Ignoring invalid line in {self.filename}: {line}")
+        except FileNotFoundError:
+            self.users = {}
 
     def get_user(self, email):
         if email in self.users:
