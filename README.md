@@ -34,7 +34,7 @@ Para executar o projeto localmente, siga estas etapas:
 3. Clone o repositório para sua máquina local:
 
    ```bash
-   git clone https://github.com/seu-usuario/appCalculadora.git
+   git clone https://github.com/hiago19/appCalculadora.git
    ```
 
 4. Navegue até o diretório do projeto:
