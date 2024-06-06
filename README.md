@@ -40,7 +40,7 @@ Para executar o projeto localmente, siga estas etapas:
 4. Navegue até o diretório do projeto:
 
    ```bash
-   cd appCalculadora
+   cd appLogin
    ```
 
 5. Execute o arquivo `Main.py`:
